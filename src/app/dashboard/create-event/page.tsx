@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { createEvent } from '@/lib/api';
+import { useAppStore } from '@/store';
 
 const PREDEFINED_IMAGES = [
     'https://images.unsplash.com/photo-1540039155733-d710d0cce3a5?auto=format&fit=crop&w=800&q=80',
@@ -12,6 +13,7 @@ const PREDEFINED_IMAGES = [
 
 export default function CreateEventPage() {
   const router = useRouter();
+  const { currentCityId } = useAppStore();
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
       title: '',
@@ -28,15 +30,23 @@ export default function CreateEventPage() {
       setLoading(true);
 
       try {
-          // Prepare data
+          // Prepare data with all required EventType fields
           const newEventData = {
               title: formData.title,
               category: formData.category,
               location: formData.location,
+              city_id: currentCityId,
+              lat: 6.2442, // Default Medellín coords for demo
+              lng: -75.5812,
+              organizer_id: 'u1', // Mock current user
               start_date: new Date(formData.date).toISOString(),
+              end_date: new Date(new Date(formData.date).getTime() + 3 * 60 * 60 * 1000).toISOString(), // +3 hours
               price: Number(formData.price) || 0,
+              capacity: 100,
               description: formData.description,
-              image_url: formData.images[0]
+              image_url: formData.images[0],
+              type: 'public',
+              status: 'published'
           };
 
           await createEvent(newEventData);
