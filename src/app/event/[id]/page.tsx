@@ -50,7 +50,7 @@ export default function EventDetailPage() {
 
       {/* Hero Image */}
       <div className="h-64 w-full relative">
-        <img src={event.images[0]} className="w-full h-full object-cover rounded-b-[3rem] shadow-lg" alt={event.title} />
+        <img src={event.image_url} className="w-full h-full object-cover rounded-b-[3rem] shadow-lg" alt={event.title} />
         <div className="absolute inset-0 bg-gradient-to-t from-[#475569] via-[#475569]/20 to-transparent rounded-b-[3rem]"></div>
       </div>
 
@@ -75,7 +75,7 @@ export default function EventDetailPage() {
                 <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-red-300"><i className="fa-regular fa-calendar"></i></div>
                 <div>
                    <p className="font-bold text-sm">Fecha y Hora</p>
-                   <p className="text-xs text-gray-200">{new Date(event.date).toLocaleString('es-CO', { dateStyle: 'long', timeStyle: 'short' })}</p>
+                   <p className="text-xs text-gray-200">{new Date(event.start_date).toLocaleString('es-CO', { dateStyle: 'long', timeStyle: 'short' })}</p>
                 </div>
             </div>
             <div className="w-full h-px bg-white/10"></div>
