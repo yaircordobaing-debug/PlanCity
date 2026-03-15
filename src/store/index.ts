@@ -28,7 +28,7 @@ export const useAppStore = create<AppState>((set) => ({
     role: 'user', // Default
     setRole: (role) => set({ role }),
 
-    currentCityId: '1', // Default to first city
+    currentCityId: 'c1', // Default to Medellín (c1)
     setCityId: (cityId) => set({ currentCityId: cityId }),
 
     isBottomNavVisible: true,
