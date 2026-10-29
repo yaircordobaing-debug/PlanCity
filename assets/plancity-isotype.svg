@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Gradiente de la flecha / avión supersónico -->
+    <linearGradient id="plancity-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6B11F4" />
+      <stop offset="35%" stop-color="#9322E7" />
+      <stop offset="65%" stop-color="#E52D8A" />
+      <stop offset="100%" stop-color="#FFA12E" />
+    </linearGradient>
+
+    <!-- Gradiente del ala derecha con sombra 3D -->
+    <linearGradient id="plancity-wing-right" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF952B" />
+      <stop offset="50%" stop-color="#E2268D" />
+      <stop offset="100%" stop-color="#6A0DED" />
+    </linearGradient>
+
+    <!-- Gradiente del ala izquierda interior -->
+    <linearGradient id="plancity-wing-left" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#B227D6" />
+      <stop offset="100%" stop-color="#5500DC" />
+    </linearGradient>
+
+    <!-- Gradiente de la estela curva -->
+    <linearGradient id="plancity-tail" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4902B7" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#9D46F5" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#E9DCFF" />
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Estela curva inferior dinámica -->
+  <path d="M 230 280 C 140 330, 160 410, 220 420 C 170 410, 165 350, 240 285 Z" fill="url(#plancity-tail)" />
+
+  <!-- Cuerpo de la figura ascendente (Flecha / Vector PlanCity) -->
+  <!-- Ala Izquierda -->
+  <path d="M 370 70 L 190 200 C 180 208, 185 225, 198 228 L 290 250 L 200 375 C 190 388, 208 402, 218 390 L 370 70 Z" fill="url(#plancity-wing-left)" />
+
+  <!-- Ala Derecha Principal (Superpuesta con luz y gradiente vivo) -->
+  <path d="M 370 70 L 290 250 L 325 390 C 330 405, 350 405, 355 390 L 400 150 C 405 110, 395 85, 370 70 Z" fill="url(#plancity-wing-right)" filter="url(#glow)" />
+</svg>
