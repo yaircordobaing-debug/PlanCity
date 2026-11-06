@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PlanCity — Descubre. Vive. Conecta. Todo en tu Ciudad.</title>
+  <meta name="description" content="La plataforma inteligente para descubrir eventos, restaurantes, parches urbanos, rooftops y el mejor talento local." />
+
+  <!-- Tipografía moderna: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Estilos Oficiales PlanCity -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/landing.css" />
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body class="landing-page-shell">
+
+  <!-- NAVBAR SUPERIOR ESTILO PAYA -->
+  <nav class="paya-header">
+    <div class="paya-brand" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+      <img src="assets/plancity-isotype.svg" alt="PlanCity Isotipo" class="paya-brand-img" style="height:38px;" />
+      <span class="paya-brand-name">Plan<span>City</span></span>
+    </div>
+
+    <ul class="paya-nav-links">
+      <li><a href="#features">Experiencias</a></li>
+      <li><a href="#how-it-works">Cómo Funciona</a></li>
+      <li><a href="#demo">Planes en Vivo</a></li>
+      <li><a href="#negocios">Para Negocios</a></li>
+    </ul>
+
+    <div>
+      <a href="app.html" class="btn-pc-primary" id="landing-header-btn">
+        <i class="fa-solid fa-play"></i> Probar App Web
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION ESTILO PAYA (Headline izquierda + Mockup app derecha) -->
+  <header class="paya-hero-section">
+    <div>
+      <div class="hero-pill-badge">
+        <span class="hero-pill-dot"></span>
+        <span>La plataforma definitiva de descubrimiento urbano</span>
+      </div>
+
+      <h1 class="hero-headline">
+        Descubre. Vive.<br>
+        Conecta. Todo en<br>
+        <span class="brand-highlight">PlanCity.</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Conectamos a las personas con eventos en vivo, restaurantes de autor, terrazas exclusivas y el talento local que hace vibrar a la ciudad. Rápido, visual y sin perderte de nada.
+      </p>
+
+      <div class="hero-actions-group">
+        <a href="app.html" class="btn-pc-primary" style="padding:16px 36px; font-size:1.05rem;" id="hero-main-cta">
+          <i class="fa-solid fa-rocket"></i> Entrar a la App Web
+        </a>
+        <a href="#demo" class="btn-pc-secondary">
+          <i class="fa-solid fa-compass"></i> Ver Experiencias
+        </a>
+      </div>
+
+      <!-- Garantías / Badges -->
+      <div class="hero-badges-row">
+        <div class="badge-item">
+          <i class="fa-solid fa-circle-check"></i>
+          <span>Descubrimiento en 1-clic</span>
+        </div>
+        <div class="badge-item">
+          <i class="fa-solid fa-bolt"></i>
+          <span>Eventos en tiempo real</span>
+        </div>
+        <div class="badge-item">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>Experiencias verificadas</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Columna Derecha: Mockup de App Estilo Paya -->
+    <div class="hero-mockup-wrapper">
+      <div class="hero-mockup-backdrop"></div>
+      <img src="assets/insightlancer-mockup.png" alt="PlanCity Interfaz Móvil" class="hero-mockup-img" />
+
+      <!-- Tarjeta Flotante -->
+      <div class="floating-hero-card">
+        <div class="floating-card-icon">
+          <i class="fa-solid fa-ticket"></i>
+        </div>
+        <div>
+          <div style="font-size:0.75rem; font-weight:800; color:var(--pc-purple);">EXPERIENCIA DESTACADA</div>
+          <div style="font-weight:800; font-size:0.95rem; color:var(--pc-text-dark);">Jazz & Rooftops Provenza</div>
+          <div style="font-size:0.75rem; color:var(--pc-text-muted);">+1.2K personas asistiendo hoy</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECCIÓN: TODO LO QUE NECESITAS (3 TARJETAS COMO PAYA) -->
+  <section class="paya-section" id="features">
+    <div class="paya-section-header">
+      <div class="paya-tag">CARACTERÍSTICAS</div>
+      <h2 class="paya-title">Todo lo que ocurre en tu ciudad, en un solo lugar</h2>
+      <p class="paya-desc">Diseñado para resolver la eterna pregunta: «¿Qué hacemos hoy?» en segundos.</p>
+    </div>
+
+    <div class="features-grid-paya">
+      <!-- Feature 1 -->
+      <div class="feature-box-paya">
+        <div class="feature-img-wrap">
+          <img src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=600&h=400&fit=crop" alt="Conciertos" />
+        </div>
+        <div class="feature-body-paya">
+          <div class="feature-icon-badge">
+            <i class="fa-solid fa-music"></i>
+          </div>
+          <h3>Eventos & Música en Vivo</h3>
+          <p>Conciertos acústicos, festivales urbanos, jam sessions y fiestas exclusivas seleccionadas para ti.</p>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="feature-box-paya">
+        <div class="feature-img-wrap">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop" alt="Gastronomía" />
+        </div>
+        <div class="feature-body-paya">
+          <div class="feature-icon-badge" style="color:var(--pc-orange); background:rgba(255,161,46,0.12);">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+          <h3>Gastronomía & Bares de Autor</h3>
+          <p>Cafés de especialidad, cocina fusión y terrazas con vistas panorámicas 360° para compartir.</p>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="feature-box-paya">
+        <div class="feature-img-wrap">
+          <img src="https://images.unsplash.com/photo-1620021665997-1522ddfb6919?w=600&h=400&fit=crop" alt="CityFeed" />
+        </div>
+        <div class="feature-body-paya">
+          <div class="feature-icon-badge" style="color:var(--pc-magenta); background:rgba(229,45,138,0.12);">
+            <i class="fa-solid fa-play"></i>
+          </div>
+          <h3>CityFeed Visual Inmersivo</h3>
+          <p>Explora la oferta urbana en formato visual a pantalla completa, con ubicación directa y botón de reserva.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: CÓMO FUNCIONA (3 PASOS COMO PAYA) -->
+  <section class="paya-section" id="how-it-works" style="background:#ffffff; border-radius:var(--radius-lg); border:1px solid var(--pc-border);">
+    <div class="paya-section-header">
+      <div class="paya-tag">FLUJO INTUITIVO</div>
+      <h2 class="paya-title">Comienza en 3 simples pasos</h2>
+      <p class="paya-desc">Sin registros obligatorios ni procesos engorrosos. Abres la app y disfrutas.</p>
+    </div>
+
+    <div class="steps-row-paya">
+      <div class="step-card-paya">
+        <div class="step-number-bubble">1</div>
+        <h3>Elige tu Ubicación</h3>
+        <p>Selecciona tu ciudad o distrito (Poblado, Laureles, Comuna 13...) para ver planes cercanos.</p>
+      </div>
+
+      <div class="step-card-paya">
+        <div class="step-number-bubble" style="background:var(--pc-magenta);">2</div>
+        <h3>Filtra según tu Estilo</h3>
+        <p>Encuentra opciones por música, gastronomía, planes gratuitos o experiencias exclusivas.</p>
+      </div>
+
+      <div class="step-card-paya">
+        <div class="step-number-bubble" style="background:var(--pc-orange);">3</div>
+        <h3>Vive la Experiencia</h3>
+        <p>Confirma tu asistencia con un clic y disfruta de lo mejor del talento y la cultura local.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: MUESTRA EN VIVO INTERACTIVA -->
+  <section class="paya-section" id="demo">
+    <div class="paya-section-header">
+      <div class="paya-tag">CATÁLOGO ACTIVO</div>
+      <h2 class="paya-title">Explora los planes disponibles hoy</h2>
+      <p class="paya-desc">Filtra por categoría y descubre una muestra de nuestra plataforma.</p>
+    </div>
+
+    <!-- Píldoras de Filtro -->
+    <div style="display:flex; justify-content:center; gap:8px; flex-wrap:wrap; margin-bottom:32px;">
+      <button class="pill-filter-btn landing-demo-filter active" data-category="all">
+        <i class="fa-solid fa-compass"></i> Todos
+      </button>
+      <button class="pill-filter-btn landing-demo-filter" data-category="eventos">
+        <i class="fa-solid fa-calendar-star"></i> Eventos
+      </button>
+      <button class="pill-filter-btn landing-demo-filter" data-category="restaurantes">
+        <i class="fa-solid fa-utensils"></i> Restaurantes
+      </button>
+      <button class="pill-filter-btn landing-demo-filter" data-category="bares">
+        <i class="fa-solid fa-martini-glass-citrus"></i> Bares & Rooftops
+      </button>
+      <button class="pill-filter-btn landing-demo-filter" data-category="parques">
+        <i class="fa-solid fa-tree"></i> Parques
+      </button>
+    </div>
+
+    <!-- Grid de Tarjetas Demo -->
+    <div class="events-cards-grid" id="landing-demo-grid">
+      <!-- Inyectado por js/landing.js -->
+    </div>
+
+    <div style="text-align:center; margin-top:20px;">
+      <a href="app.html" class="btn-pc-primary" style="padding:14px 36px; font-size:1rem;">
+        <i class="fa-solid fa-arrow-right"></i> Abrir la App Completa (Catálogo + CityFeed)
+      </a>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: PROPUESTA COMERCIAL PARA NEGOCIOS Y ORGANIZADORES -->
+  <section class="paya-section" id="negocios">
+    <div class="b2b-pitch-box">
+      <div>
+        <div class="paya-tag">PARA NEGOCIOS Y ORGANIZADORES</div>
+        <h2 style="font-size:2.2rem; font-weight:800; line-height:1.2; margin-bottom:14px;">
+          Haz que tu lugar o evento esté en el radar de miles de personas
+        </h2>
+        <p style="color:var(--pc-text-muted); line-height:1.6;">
+          PlanCity es el canal directo entre tu establecimiento y personas que están activamente buscando qué hacer y dónde gastar hoy en la ciudad.
+        </p>
+
+        <ul class="b2b-check-list">
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Mayor visibilidad sin depender de algoritmos de redes sociales</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Público segmentado por zona geográfica e intereses reales</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Ficha destacada con enlace a reservas, menú y contacto directo</span>
+          </li>
+        </ul>
+
+        <a href="app.html" class="btn-pc-primary">
+          <i class="fa-solid fa-bullhorn"></i> Explorar Formato en la App
+        </a>
+      </div>
+
+      <div style="background:var(--pc-bg-light); border-radius:var(--radius-md); padding:28px; border:1px solid var(--pc-border); text-align:center;">
+        <div style="font-size:2.8rem; font-weight:900; color:var(--pc-purple); margin-bottom:4px;">+85%</div>
+        <div style="font-size:1rem; font-weight:800; color:var(--pc-text-dark); margin-bottom:8px;">Mayor Tráfico Peatonal</div>
+        <p style="font-size:0.88rem; color:var(--pc-text-muted); line-height:1.5;">
+          Los usuarios de PlanCity deciden en menos de 3 minutos dónde salir a cenar, tomar un café o escuchar música en vivo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER FINAL CTA OSCURO ESTILO PAYA -->
+  <section class="paya-bottom-banner">
+    <div>
+      <h2>¿Listo para descubrir lo mejor de tu ciudad?</h2>
+      <p>Accede a la primera versión funcional para PC y móvil. Explora eventos, restaurantes y parches urbanos sin filtros.</p>
+    </div>
+    <a href="app.html" class="btn-pc-primary" style="background:#ffffff; color:var(--pc-purple); padding:16px 38px; font-size:1.05rem;">
+      <i class="fa-solid fa-rocket"></i> Lanzar PlanCity App
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="paya-footer">
+    <div class="footer-top-row">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <img src="assets/plancity-isotype.svg" alt="PlanCity Logo" style="height:32px;" />
+        <span style="font-size:1.3rem; font-weight:800; color:var(--pc-text-dark);">Plan<span style="color:var(--pc-purple);">City</span></span>
+      </div>
+      <div style="display:flex; gap:20px; font-weight:700; font-size:0.88rem; color:var(--pc-text-muted);">
+        <a href="#features">Experiencias</a>
+        <a href="#how-it-works">Cómo Funciona</a>
+        <a href="#demo">Catálogo</a>
+        <a href="app.html" style="color:var(--pc-purple);">App Web</a>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      PlanCity &bull; Plataforma de Descubrimiento Urbano &bull; Medellín, Colombia 2026
+    </div>
+  </footer>
+
+  <script type="module" src="js/landing.js"></script>
+</body>
+</html>
