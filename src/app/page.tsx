@@ -1,5 +1,5 @@
-import { redirect } from 'next/navigation';
+import { LandingPage } from '@/modules/landing';
 
 export default function Home() {
-  redirect('/index.html');
+  return <LandingPage />;
 }
