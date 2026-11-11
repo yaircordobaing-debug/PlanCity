@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PlanCity App — Descubre Experiencias Urbanas</title>
+  <meta name="description" content="Aplicación oficial de PlanCity para descubrir eventos, restaurantes, parches y sitios urbanos." />
+
+  <!-- Tipografía: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Estilos Oficiales PlanCity -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+
+  <div class="app-container">
+
+    <!-- SIDEBAR ESCRITORIO (3 Secciones clave: Inicio, Explorar, CityFeed) -->
+    <aside class="desktop-sidebar">
+      <div class="sidebar-logo" onclick="window.location.href='index.html'" title="Ir a la Landing Page">
+        <img src="assets/plancity-isotype.svg" alt="PlanCity Logo" />
+        <span class="sidebar-brand-text">Plan<span>City</span></span>
+      </div>
+
+      <!-- Selector de Ciudad -->
+      <div class="sidebar-city-box">
+        <span class="sidebar-city-label">Ubicación Actual</span>
+        <div class="city-pill-selector">
+          <i class="fa-solid fa-location-dot"></i>
+          <select class="city-select-input" id="sidebar-city-select">
+            <option value="medellin">Medellín</option>
+            <option value="bogota">Bogotá</option>
+            <option value="cali">Cali</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Navegación Principal -->
+      <nav class="sidebar-nav">
+        <span class="sidebar-city-label" style="padding:0 8px;">Exploración</span>
+        <button class="sidebar-nav-item active" data-view-target="home">
+          <i class="fa-solid fa-house"></i> <span>Inicio</span>
+        </button>
+        <button class="sidebar-nav-item" data-view-target="explore">
+          <i class="fa-solid fa-compass"></i> <span>Explorar</span>
+        </button>
+        <button class="sidebar-nav-item" data-view-target="feed">
+          <i class="fa-solid fa-play"></i> <span>CityFeed Visual</span>
+        </button>
+      </nav>
+
+      <!-- Enlace a la Landing -->
+      <div style="border-top:1px solid var(--pc-border); padding-top:16px; margin-top:auto;">
+        <a href="index.html" style="display:flex; align-items:center; gap:10px; color:var(--pc-text-muted); font-size:0.85rem; font-weight:700; padding:8px;" title="Ver presentación comercial">
+          <i class="fa-solid fa-arrow-left"></i> <span>Volver a Landing</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="app-main-content">
+
+      <!-- TOP HEADER (Móvil y Escritorio) -->
+      <header class="app-top-header">
+        <!-- Logo Móvil -->
+        <div class="mobile-logo-wrap" onclick="window.location.href='index.html'">
+          <img src="assets/plancity-isotype.svg" alt="PlanCity Isotipo" />
+          <span class="mobile-logo-text">Plan<span>City</span></span>
+        </div>
+
+        <!-- Selector de Ciudad en Cabecera -->
+        <div class="city-pill-selector" style="max-width:180px;">
+          <i class="fa-solid fa-location-dot"></i>
+          <select class="city-select-input" id="city-select">
+            <option value="medellin">Medellín</option>
+            <option value="bogota">Bogotá</option>
+            <option value="cali">Cali</option>
+          </select>
+        </div>
+
+        <!-- Botón Volver a Landing -->
+        <a href="index.html" class="btn-pc-secondary" style="padding:6px 14px; font-size:0.8rem; border-radius:var(--radius-full);">
+          <i class="fa-solid fa-arrow-left"></i> <span class="hidden sm:inline">Landing</span>
+        </a>
+      </header>
+
+      <!-- VISTAS CON SCROLL DINÁMICO -->
+      <div class="scroll-view-area">
+        <!-- Vista 1: Inicio -->
+        <section id="view-home" class="view-section active">
+          <!-- Inyectado por js/app.js -->
+        </section>
+
+        <!-- Vista 2: Explorar Catálogo -->
+        <section id="view-explore" class="view-section">
+          <!-- Inyectado por js/app.js -->
+        </section>
+
+        <!-- Vista 3: CityFeed Visual (Reels a pantalla completa sin video) -->
+        <section id="view-feed" class="view-section">
+          <!-- Inyectado por js/app.js -->
+        </section>
+      </div>
+
+    </main>
+
+    <!-- DOCK INFERIOR MÓVIL (3 Botones principales: Inicio, CityFeed, Explorar) -->
+    <nav class="mobile-bottom-bar" aria-label="Navegación Móvil">
+      <button class="bottom-tab-btn active" data-view-target="home">
+        <i class="fa-solid fa-house"></i>
+        <span>Inicio</span>
+      </button>
+
+      <button class="bottom-tab-btn center-btn" data-view-target="feed" title="CityFeed Visual">
+        <div class="center-btn-bubble">
+          <i class="fa-solid fa-play" style="margin-left:3px;"></i>
+        </div>
+      </button>
+
+      <button class="bottom-tab-btn" data-view-target="explore">
+        <i class="fa-solid fa-compass"></i>
+        <span>Explorar</span>
+      </button>
+    </nav>
+
+    <!-- MODAL DE DETALLE -->
+    <div id="app-modal" class="mvp-modal-backdrop" aria-hidden="true">
+      <!-- Inyectado por js/app.js -->
+    </div>
+
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

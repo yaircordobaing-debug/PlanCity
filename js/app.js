@@ -38,6 +38,13 @@ class PlanCityApp {
 
     this.updateNavigationUI();
     this.renderCurrentView();
+
+    // Si viene con parámetro ?item= desde la landing, abrir el detalle automáticamente
+    const params = new URLSearchParams(window.location.search);
+    const itemId = params.get('item');
+    if (itemId) {
+      this.openModal(itemId);
+    }
   }
 
   setupListeners() {
