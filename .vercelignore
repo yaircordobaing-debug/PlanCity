@@ -1,0 +1,9 @@
+# .vercelignore – keep necessary data for the app
+# Exclude only heavy development files; retain JSON data needed at runtime
+# Exclude compiled source maps
+*.map
+# Exclude mock generation scripts (not needed in production)
+generateMockData.js
+fix.js
+# If you have extremely large assets you can add them here, but keep
+# data/ and plan_city_data.json because the app imports them directly.
